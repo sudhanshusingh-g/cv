@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Sudhanshu Singh | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Sudhanshu Singh's professional CV showcasing skills, education, work experience, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, HTML, CSS, JavaScript, Resume, CV, Web Developer"
+    />
+    <meta name="author" content="Sudhanshu Singh" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sudhanshu Singh | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Professional CV of Sudhanshu Singh - Frontend Developer."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/profile.jpg"
+    />
+    <meta property="og:site_name" content="Sudhanshu Singh CV" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-green: #2ecc71;
+        --link-blue: #3498db;
+        --text-dark: #333;
+        --text-light: #666;
+      }
+
+      /* Page and Body Setup */
+      @media print {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+        html {
+          height: 100%;
+        }
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-dark);
+        background-color: #fff;
+        line-height: 1.4;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.5in;
+
+        /* Print settings */
+        @media print {
+          padding: 0.4in;
+          margin: 0;
+          min-height: auto;
+          max-height: 11in;
+        }
+      }
+
+      /* Header Styling */
+      header {
+        padding-bottom: 0.3in;
+        margin-bottom: 0.2in;
+        border-top: 2px solid var(--primary-green);
+
+        @media print {
+          padding-bottom: 0.25in;
+          margin-bottom: 0.15in;
+        }
+      }
+
+      header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: var(--text-dark);
+
+        @media print {
+          font-size: 22px;
+        }
+      }
+
+      header > p {
+        font-size: 13px;
+        color: var(--primary-green);
+        font-weight: 600;
+        margin-bottom: 0.15in;
+
+        @media print {
+          font-size: 12px;
+        }
+      }
+
+      address {
+        font-style: normal;
+        font-size: 12px;
+        color: var(--text-light);
+        line-height: 1.3;
+
+        @media print {
+          font-size: 11px;
+        }
+      }
+
+      address p {
+        margin: 2px 0;
+      }
+
+      /* Main Content */
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @media print {
+          overflow: visible;
+        }
+      }
+
+      /* Section Styling */
+      section {
+        margin-bottom: 0.25in;
+
+        @media print {
+          margin-bottom: 0.15in;
+          page-break-inside: avoid;
+        }
+      }
+
+      section h2 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--primary-green);
+        margin-bottom: 0.15in;
+        border-bottom: none;
+        text-transform: capitalize;
+
+        @media print {
+          font-size: 13px;
+          margin-bottom: 0.1in;
+        }
+      }
+
+      section > p {
+        font-size: 12px;
+        color: var(--text-light);
+        line-height: 1.4;
+        margin-bottom: 0.1in;
+
+        @media print {
+          font-size: 11px;
+        }
+      }
+
+      /* Article Styling */
+      article {
+        margin-bottom: 0.2in;
+
+        @media print {
+          margin-bottom: 0.12in;
+          page-break-inside: avoid;
+        }
+      }
+
+      article h3 {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--link-blue);
+        margin-bottom: 2px;
+
+        @media print {
+          font-size: 12px;
+        }
+      }
+
+      article > p {
+        font-size: 12px;
+        color: var(--text-light);
+        margin: 2px 0;
+        font-weight: 500;
+
+        @media print {
+          font-size: 11px;
+        }
+      }
+
+      article > p strong {
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+
+      /* Lists */
+      ul {
+        list-style: none;
+        margin: 0.1in 0 0.1in 0.2in;
+        padding: 0;
+
+        @media print {
+          margin: 0.08in 0 0.08in 0.15in;
+        }
+      }
+
+      li {
+        margin-bottom: 4px;
+        padding-left: 12px;
+        position: relative;
+        font-size: 12px;
+        line-height: 1.35;
+        color: var(--text-light);
+
+        @media print {
+          margin-bottom: 3px;
+          font-size: 11px;
+        }
+      }
+
+      li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-green);
+        font-weight: bold;
+      }
+
+      /* Links */
+      a {
+        color: var(--link-blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        font-size: 11px;
+        color: var(--text-light);
+        text-align: center;
+        margin-top: 0.2in;
+        padding-top: 0.1in;
+        border-top: 1px solid #eee;
+
+        @media print {
+          margin-top: 0.1in;
+          padding-top: 0.05in;
+          font-size: 10px;
+        }
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Print Media Optimizations */
+      @media print {
+        html,
+        body {
+          width: 8.5in;
+          height: 11in;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          padding: 0.4in;
+        }
+
+        section {
+          page-break-inside: avoid;
+        }
+
+        article {
+          page-break-inside: avoid;
+        }
+
+        @page {
+          size: letter;
+          margin: 0.5in;
+        }
+      }
+
+      /* Responsive adjustments for smaller screens */
+      @media (max-width: 768px) {
+        body {
+          padding: 0.3in;
+        }
+
+        header h1 {
+          font-size: 20px;
+        }
+
+        section h2 {
+          font-size: 13px;
+        }
+
+        article h3 {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Sudhanshu Singh</h1>
+      <p>Frontend Developer</p>
+
+      <address>
+        <p>Noida, Uttar Pradesh</p>
+        <p>Email: sudisngh32@gmail.com</p>
+        <p>Phone: +91-9140499018</p>
+      </address>
+    </header>
+
+    <main>
+      <section>
+        <h2>Skills</h2>
+        <p>
+          Javascript, React, Java, Node.js, Spring Boot, Next.JS, AWS, HTML,
+          CSS, Redux, TypeScript, Express.js, Python, MongoDB, SQL, Git, Docker,
+          GCP, Generative AI
+        </p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+
+        <article>
+          <h3>BBD University</h3>
+          <p><strong>Bachelor of Computer Science</strong></p>
+          <p>August 2017 - October 2020</p>
+
+          <ul>
+            <li>Graduated with First Class Honors</li>
+            <li>Built multiple frontend projects</li>
+            <li>Participated in coding competitions</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <article>
+          <h3>Probus Smart Things Pvt Ltd</h3>
+          <p><strong>Software Development Engineer 1</strong></p>
+          <p>June 2015 - Present</p>
+
+          <ul>
+            <li>
+              Spearheaded the migration of a legacy system to a modern React 18
+              architecture, slashing application load times by 40% and build
+              times by 35% through aggressive code-refactoring, implementation
+              of reusable UI components (Tailwind/Bootstrap), and Redux state
+              optimization.
+            </li>
+            <li>
+              Architected and deployed a scalable, multi-module SaaS application
+              and CRM dashboard featuring complex Role-Based Access Control
+              (RBAC), taking full end-to-end code ownership of cross-functional
+              features
+            </li>
+            <li>
+              Orchestrated multi-cloud deployments across AWS and GCP by
+              containerizing applications via Docker, establishing reliable
+              infrastructure that improved server uptime and streamlined
+              environment parity.
+            </li>
+            <li>
+              Accelerated sprint velocity and code quality by integrating
+              AI-driven development tools and Jest frameworks, expanding
+              automated test coverage by 45% while seamlessly integrating secure
+              third-party REST APIs.
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Oston Technology Pvt Ltd</h3>
+          <p><strong>Software Developer</strong></p>
+          <p>Jan 2024 - July 2024</p>
+
+          <ul>
+            <li>
+              Developed high-performance landing pages and full-scale e-commerce
+              platforms using React and Next.js, leveraging Server-Side
+              Rendering (SSR) to improve SEO rankings and page performance.
+            </li>
+            <li>
+              Boosted user engagement and site conversion rates by 20% by
+              implementing responsive, pixel-perfect UI designs and optimizing
+              asset loading for faster web vitals.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Tata Consultancy Services Ltd</h3>
+          <p><strong>Programmer</strong></p>
+          <p>Dec 2021 - Jun 2023</p>
+
+          <ul>
+            <li>
+              Developed and maintained enterprise backend services using Java
+              and Spring Boot, writing secure RESTful APIs to handle routine
+              data transactions and business logic updates.
+            </li>
+            <li>
+              Assisted in refactoring legacy monolithic modules and writing
+              optimized SQL queries, database schemas, and stored procedures,
+              which improved data retrieval speeds for core application reports
+              by 25%.
+            </li>
+            <li>
+              Bridged backend-frontend integration by parsing JSON payloads and
+              debugging API endpoints, ensuring seamless data flow between
+              server-side logic and early-stage UI layouts.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Across the Internet</h2>
+
+        <ul>
+          <li>
+            <a href="https://github.com/sudhanshusingh-g" target="_blank">
+              GitHub
+            </a>
+          </li>
+
+          <li>
+            <a href="https://linkedin.com/in/sudhanshusingh32" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Sudhanshu Singh</p>
+    </footer>
+  </body>
+</html>
