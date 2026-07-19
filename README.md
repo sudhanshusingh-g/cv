@@ -4,7 +4,7 @@ A clean, professional single-page CV/Resume built with HTML and CSS. Designed to
 
 ## 🔗 Project URL
 
-Project URL: https://sudhanshusingh-g.github.io/cv/
+https://sudhanshusingh-g.github.io/cv/
 
 ## 🌟 Features
 
