@@ -2,6 +2,10 @@
 
 A clean, professional single-page CV/Resume built with HTML and CSS. Designed to fit perfectly on a single page while remaining responsive and print-ready.
 
+## 🔗 Deployed Link
+
+Live Site: https://sudhanshusingh-g.github.io/cv/
+
 ## 🌟 Features
 
 - **Single Page Design** - Fits perfectly on one letter-sized page (8.5" × 11")
