@@ -216,3 +216,8 @@ Free to use and modify for personal purposes.
 - Make sure viewport meta tag is present
 - Test in multiple browsers
 - Adjust zoom level if needed
+
+
+### Acknowledgement
+Built as part of Roadmap.sh
+https://roadmap.sh/projects/single-page-cv
