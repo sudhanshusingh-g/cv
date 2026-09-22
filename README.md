@@ -1,6 +1,6 @@
 # Single Page CV
 
-A clean, professional single-page CV/Resume built with HTML and CSS. Designed to fit perfectly on a single page while remaining responsive and print-ready.
+A clean, professional single-page CV/Resume built with HTML and CSS. Designed to fit perfectly on a single page while remaining responsive and print-ready..
 
 ## 🔗 Project URL
 
